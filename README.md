@@ -20,16 +20,24 @@ As such, I have no idea if this will work on any of their other devices.
 
 ## Installation
 
-1. Download the ZIP archive from the latest release
-2. Extract the archive
-3. Move the HoloPlugin folder to `%LOCALAPPDATA%\Logi\LogiPluginService\Plugins`
-4. Move the `config.json` file into the plugin's data directory at `%LOCALAPPDATA%\Logi\LogiPluginService\PluginData\Hololive` (create the folder if not already present)
-5. Log into [Holodex](https://holodex.net/), go to your account settings and generate an API Key
-6. Replace the `api-key` placeholder in `config.json` with your generated Holodex API key
-7. Adjust the other values to your liking. Possible values are always either `true` or `false`.
-8. Restart your Loupedeck
-9. If you can't see the plugin in the list of available ones, go to _Show and hide plugins_ and enable it there
-10. Assign the folder to any button you like
+1. Download the latest plugin (`.lplug4` file) from the releases page
+2. Log into [Holodex](https://holodex.net/), go to your account settings and generate an API Key
+3. Navigate to `%LOCALAPPDATA%\Logi\LogiPluginService\PluginData\Hololive` (create the folder if not already present)
+4. Create a file in this directory named `config.json` with the following contents:
+
+   ```json
+   {
+     "api-key": "<YOUR API KEY FROM STEP 1>",
+     "hideGuestAppearances": true,
+     "hideHolostars": false
+   }
+   ```
+
+5. Replace the `api-key` placeholder in `config.json` with your generated Holodex API key
+6. Adjust the other values to your liking. Possible values are always either `true` or `false`.
+7. With the Loupedeck software open, run the .lplug4 file to install the plugin
+8. If you can't see the plugin in the list of available ones, go to _Show and hide plugins_ and enable it there
+9. Assign the folder to any button you like
 
 ## Disclaimer
 
